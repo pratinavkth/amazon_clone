@@ -13,6 +13,7 @@ const DB ="mongodb+srv://pratinavkothia123:Kothia%40123@cluster0.4pnjqpu.mongodb
 // MIDDLEWARES
 // clientside(flutter)->middleware (make the work easy)
 //  ->server it will return something and comes to client side -> flutter
+app.use(express.json());
 app.use(authRouter);
 
 //connections
@@ -23,6 +24,6 @@ mongoose.connect(DB).then(()=>{
 });
 
 
-app.listen(PORT,()=>{
+app.listen(PORT,"0.0.0.0",()=>{
     console.log(`connected at a port ${PORT}`);
 });
