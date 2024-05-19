@@ -24,8 +24,8 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.amazon_clone"
-    compileSdkVersion flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    compileSdkVersion 34
+    ndkVersion "34.0.0"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
