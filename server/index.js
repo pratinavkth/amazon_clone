@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 // iMPORTS FROM OTHER FILES
 const authRouter=require("./routes/auth");
+const adminRouter=require("./routes/admin");
 
 // INITIALIZE EXPRESS APP
 const PORT = 3000;
@@ -15,6 +16,7 @@ const DB ="mongodb+srv://pratinavkothia123:Kothia%40123@cluster0.4pnjqpu.mongodb
 //  ->server it will return something and comes to client side -> flutter
 app.use(express.json());
 app.use(authRouter);
+app.use(adminRouter);
 
 //connections
 mongoose.connect(DB).then(()=>{
